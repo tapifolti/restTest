@@ -27,14 +27,14 @@ import javax.validation.constraints.*;
 @Consumes({ "application/json" })
 @Produces({ "application/json" })
 @io.swagger.annotations.Api(description = "the power API")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaJerseyServerCodegen", date = "2017-04-23T16:16:39.670Z")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaJerseyServerCodegen", date = "2017-04-26T13:33:48.390Z")
 public class PowerApi  {
    private final PowerApiService delegate = PowerApiServiceFactory.getPowerApi();
 
     @GET
     @Path("/{index}")
     @Consumes({ "application/json" })
-    @Produces({ "application/json", "application/xml", "text/xml", "text/html" })
+    @Produces({ "application/json" })
     @io.swagger.annotations.ApiOperation(value = "", notes = "Returns the index-th power of the parameter", response = Integer.class, responseContainer = "List", tags={  })
     @io.swagger.annotations.ApiResponses(value = { 
         @io.swagger.annotations.ApiResponse(code = 200, message = "calculated power", response = Integer.class, responseContainer = "List"),

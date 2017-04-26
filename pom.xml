@@ -60,7 +60,9 @@
             </goals>
             <configuration>
               <scanIntervalSeconds>0</scanIntervalSeconds>
+<!--
               <daemon>true</daemon>
+-->
             </configuration>
           </execution>
           <execution>
@@ -159,6 +161,14 @@
         <scope>provided</scope>
     </dependency>
 
+<!--
+    <dependency>
+      <groupId>io.dropwizard</groupId>
+      <artifactId>dropwizard-core</artifactId>
+      <version>${dropwizard.version}</version>
+    </dependency>
+-->
+
   </dependencies>
   <repositories>
     <repository>
@@ -170,7 +180,7 @@
     </repository>
   </repositories>
   <properties>
-    <java.version>1.7</java.version>
+    <java.version>1.8</java.version>
     <maven.compiler.source>${java.version}</maven.compiler.source>
     <maven.compiler.target>${java.version}</maven.compiler.target>
     <swagger-core-version>1.5.12</swagger-core-version>
@@ -181,5 +191,6 @@
     <logback-version>1.1.7</logback-version>
     <servlet-api-version>2.5</servlet-api-version>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <dropwizard.version>1.1.0</dropwizard.version>
   </properties>
 </project>
