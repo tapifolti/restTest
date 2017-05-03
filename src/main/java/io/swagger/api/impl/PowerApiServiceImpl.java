@@ -20,6 +20,6 @@ public class PowerApiServiceImpl extends PowerApiService {
     @Override
     public Response powerOfIndex(Integer index,  Integer number,  List<Integer> numbers, SecurityContext securityContext) throws NotFoundException {
         // do some magic!
-        return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, "magic!")).build();
+        return Response.ok().entity(new ApiResponseMessage(null)).build();
     }
 }

@@ -47,6 +47,6 @@ public class FactorialApiServiceImpl extends FactorialApiService implements Func
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
-        return Response.ok().entity(new ApiResponseMessage(ApiResponseMessage.OK, resultJson)).build();
+        return Response.ok().entity(new ApiResponseMessage(results)).build();
     }
 }

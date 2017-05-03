@@ -19,5 +19,9 @@ You can then view the swagger listing here:
 http://localhost:8080/math/swagger.json
 ```
 
+Create WAR
+```
+mvn compile war:war
+```
 Note that if you have configured the `host` to be something other than localhost, the calls through
 swagger-ui will be directed to that host and not localhost!

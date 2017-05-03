@@ -9,6 +9,8 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import org.eclipse.jetty.util.log.Log;
+import org.eclipse.jetty.util.log.StdErrLog;
 
 public class Bootstrap extends HttpServlet {
   @Override
@@ -24,8 +26,11 @@ public class Bootstrap extends HttpServlet {
         .url("http://opensource.org/licenses/MIT"));
 
     ServletContext context = config.getServletContext();
+
     Swagger swagger = new Swagger().info(info);
 
     new SwaggerContextService().withServletConfig(config).updateSwagger(swagger);
+
+    // Log.setLog(new StdErrLog());
   }
 }
